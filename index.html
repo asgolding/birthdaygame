@@ -175,25 +175,29 @@
     // Redesigned maze for clarity and a guaranteed path
     const mazeLayout = [
         "##################################################",
-        "# HH# H   A   PPPP  PPPP  Y   Y                  #",
-        "# H H H  A A  P   P P   P  Y Y                   #",
-        "# HHHHH AAAAA PPPP  PPPP    Y                    #",
-        "# H   H A   A P     P       Y                    #",
-        "# H   H A   A P     P       Y                    #",
+        "#                                                #",
+        "#    #   #   #   ####  ####  #   #               #",
+        "#    #   #  # #  #   # #   #   #                 #",
+        "#    ##### ##### ####  ####    #                 #",
+        "#    #   # #   # #     #       #                 #",
+        "#    #   # #   # #     #       #                 #",
         "#                                                #",
         "################# ################################",
-        "#BBBB  I RRRR  TTTTT H H DDDD   A   Y   Y         #",
-        "#B  B  I R  R    T   H H D  D  A A   Y Y          #",
-        "#BBBB  I RRRR    T   HHH D  D AAAAA  Y           #",
-        "#B  B  I R R     T   H H D  D A   A  Y           #",
-        "#BBBB  I R  R    T   H H DDDD  A   A  Y           #",
+        "#                                                #",
+        "# ####  # ####  ##### # # ####   #   #   #       #",
+        "# #  #  # #  #    #   # # #  #  # #   # #        #",
+        "# ####  # ####    #   ### #  # #####   #         #",
+        "# #  #  # # #     #   # # #  # #   #   #         #",
+        "# ####  # #  #    #   # # #### #   #   #         #",
         "#                                                #",
         "################# ################################",
-        "#DDDD   A   DDDD                                 #",
-        "#D  D  A A  D  D                                 #",
-        "#D  D AAAAA D  D                                 #",
-        "#D  D A   A D  D                                 #",
-        "#DDDD A   A DDDD                                E#",
+        "#                                                #",
+        "#       ####   #   ####                          #",
+        "#       #  #  # #  #  #                          #",
+        "#       #  # ##### #  #                          #",
+        "#       #  # #   # #  #                          #",
+        "#       #### #   # ####                          #",
+        "#                                              E #",
         "##################################################",
     ];
 
@@ -236,9 +240,12 @@
     function setupGhosts() {
         ghosts.length = 0; // Clear existing ghosts
         // Add new ghosts at strategic starting points
-        ghosts.push({ x: 20, y: 8, dx: 1, dy: 0, size: tileSize * 0.8 });
-        ghosts.push({ x: 10, y: 16, dx: 0, dy: 1, size: tileSize * 0.8 });
+        ghosts.push({ x: 20, y: 6, dx: 1, dy: 0, size: tileSize * 0.8 });
+        ghosts.push({ x: 10, y: 14, dx: 0, dy: 1, size: tileSize * 0.8 });
+        ghosts.push({ x: 20, y: 14, dx: 0, dy: 1, size: tileSize * 0.8 });
         ghosts.push({ x: 40, y: 18, dx: -1, dy: 0, size: tileSize * 0.8 });
+        ghosts.push({ x: 5, y: 18, dx: -1, dy: 0, size: tileSize * 0.8 });
+        ghosts.push({ x: 30, y: 18, dx: -1, dy: 0, size: tileSize * 0.8 });
     }
 
     function drawMaze() {
